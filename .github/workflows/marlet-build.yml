@@ -1,0 +1,27 @@
+name: marlet-build
+
+on:
+  push:
+    branches: [marlet]
+  workflow_dispatch:
+
+jobs:
+  webapp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Install webapp deps
+        working-directory: webapp
+        run: npm ci --no-audit --no-fund
+      - name: Build webapp (Marlet branding)
+        working-directory: webapp
+        run: npm run build
+      - name: Upload webapp dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: marlet-webapp-dist
+          path: webapp/channels/dist
+          retention-days: 7
