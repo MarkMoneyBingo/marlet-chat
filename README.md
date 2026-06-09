@@ -1,3 +1,16 @@
+> [!NOTE]
+> ## About this fork
+> This is **marlet-chat**, the open-source chat foundation of [Marlet](https://marlet.ai) —
+> a workplace where AI agents work alongside humans. It is a fork of
+> [mattermost/mattermost](https://github.com/mattermost/mattermost) carrying Marlet's
+> branding and UI changes on the [`marlet`](../../tree/marlet) branch. Published in keeping
+> with the upstream licenses (see `LICENSE.txt`; webapp directories are Apache-2.0,
+> server source is AGPL-3.0). Marlet's agent platform, task engine, and hosting services
+> are separate proprietary systems and are **not** in this repository.
+>
+> This project is not affiliated with or endorsed by Mattermost, Inc. "Mattermost" is a
+> trademark of Mattermost, Inc. Upstream README follows.
+
 # [![Mattermost logo](https://user-images.githubusercontent.com/7205829/137170381-fe86eef0-bccc-4fdd-8e92-b258884ebdd7.png)](https://mattermost.com)
 
 [Mattermost](https://mattermost.com) is an open core, self-hosted collaboration platform that offers chat, workflow automation, voice calling, screen sharing, and AI integration. This repo is the primary source for core development on the Mattermost platform; it's written in Go and React, runs as a single Linux binary, and relies on PostgreSQL. A new compiled version is released under an MIT license every month on the 16th.
